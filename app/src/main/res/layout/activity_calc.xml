@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalcActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="124dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="38dp"
+        android:text="Calculadora"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/firstEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:ems="10"
+        android:hint="Digite um valor"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Digite um valor"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/firstEditText"
+        app:layout_constraintTop_toBottomOf="@+id/firstEditText" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="61dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/firstEditText"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/btn_soma"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_soma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/btn_multi"
+        app:layout_constraintStart_toStartOf="@+id/btn_multi"
+        app:layout_constraintTop_toBottomOf="@+id/lastEditText" />
+
+    <Button
+        android:id="@+id/btn_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="2dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/lastEditText"
+        app:layout_constraintTop_toBottomOf="@+id/lastEditText" />
+
+    <Button
+        android:id="@+id/btn_multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="52dp"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_soma" />
+
+    <Button
+        android:id="@+id/btn_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="@+id/btn_sub"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sub" />
+</androidx.constraintlayout.widget.ConstraintLayout>
